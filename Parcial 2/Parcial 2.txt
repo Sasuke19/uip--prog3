@@ -1,0 +1,92 @@
+ #:impuort riseIntransition kivy.uix.screenmanager.riseIntransition
+ #:impor c kivy.utils.get_color_from_hex
+  screenManager:  
+        transition: riseIntransition()
+		
+          Screen:
+		        name 'loging'
+				
+			 boxlayout:
+			       orientation: 'vertical'
+				   
+				gridlayout:
+				      cols: 2
+					  rows: 2
+					  label:
+					            text: 'server'
+								
+						textinput:
+						      id: server
+							  text:'127.0.0.1
+							  multiline: false
+							  podding: [10, 8.5 *(self.heeight = self, line_height]
+					    label
+						   text: 'nickname'
+				textinput
+						id: nickname
+						text: 'kivy'
+						multiline: false
+						podding: [10, 8.5 *(self.heeight = self, line_height]
+						
+				button:
+				   text: 'connet'
+				   on_press root.current = 'chatroon'
+				   
+				   screen: 
+				   name: ' chatroon'
+				   
+				   boxlayout:  
+				   
+				   orientation 'vertical'
+				   
+				   button:
+				   
+				   text: 'disconnect'
+				   on_press_ root.current = 'lagin'
+				   
+				screllvienw:
+				chatlabel:
+				    id: chat_logs
+					text: 'user says: x/nuser says : y'
+					
+				boxlayout:
+				
+				      heeight: 90
+					  orientation: 'horiontal'
+					  podding: 0
+					  size_hint: (1,non)
+					  
+					  textinput:
+					     id: message
+						 
+						 button:
+						 tex: 'send'
+						 seze_hint: (0.3,1)
+						 
+					<chatlabelQlabel>:
+					
+					tex_size: (self.width, none)
+					halingn: 'left'
+					valingn: 'top'
+					size_hint: (1 none)
+					heeight: self.texture_seze [1]
+					
+					 screllvienw>:
+					 
+					canvas.before:
+					  color
+					  
+					   rgb: 1,1,1
+					   
+					   rectangle:
+					        pos: self.pos
+							size: self.size
+					   
+				   
+				   
+				   
+				   
+				   
+				   
+						
+				
